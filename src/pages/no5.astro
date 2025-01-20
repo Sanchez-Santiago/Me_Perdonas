@@ -1,0 +1,102 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div id="cajas">
+    <div class="cabeza">
+      <h1>¿Perdonaaaaaaaaameeeee si?</h1>
+      <p>ohhh daleeeeee</p>
+    </div>
+    <div class="cen links">
+      <a id="si" href="/SI">SI</a>
+    </div>
+  </div>
+  <style>
+    /* Estilos para el contenedor principal */
+    .caja {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .cen {
+      flex-direction: column;
+      height: 100vh; /* Centrado vertical completo */
+      text-align: center;
+    }
+
+    .cabeza {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    /* Estilos para el título */
+    h1 {
+      font-size: 2.5rem;
+      color: #eaeaea; /* Color más claro para mejor contraste */
+      margin-bottom: 2rem; /* Separación con los enlaces */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para resaltar */
+    }
+
+    p {
+      font-size: 2.5rem;
+      color: #eaeaea; /* Color más claro para mejor contraste */
+      margin-bottom: 2rem; /* Separación con los enlaces */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para resaltar */
+    }
+
+    /* Estilos base para los botones/enlaces */
+    #si {
+      display: inline-block;
+      padding: 170px 300px; /* Mucho más espacio interno */
+      font-size: 3rem; /* Texto mucho más grande */
+      text-decoration: none;
+      color: white; /* Color del texto */
+      border-radius: 8px; /* Bordes más redondeados */
+      transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra inicial */
+    }
+
+    #no {
+      display: inline-block;
+      padding: 0px 5px; /* Mucho menos espacio interno */
+      font-size: 0.8rem; /* Texto mucho más pequeño */
+      text-decoration: none;
+      color: white; /* Color del texto */
+      border-radius: 8px; /* Bordes más redondeados */
+      transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra inicial */
+    }
+
+    /* Estilo para el botón "SI" */
+    #si {
+      background-color: #28a745; /* Verde brillante */
+    }
+
+    #si:hover {
+      background-color: #218838; /* Verde oscuro */
+      transform: scale(1.1); /* Ampliación ligera */
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+    }
+
+    /* Estilo para el botón "NO" */
+    #no {
+      background-color: #dc3545; /* Rojo brillante */
+    }
+
+    #no:hover {
+      background-color: #c82333; /* Rojo oscuro */
+      transform: scale(1.1); /* Ampliación ligera */
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+    }
+  </style>
+</Layout>

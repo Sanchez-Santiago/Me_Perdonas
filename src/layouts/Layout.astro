@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content="Astro" />
+    <title>Astro Basics</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Fondo Radial Izquierdo -->
+      <div class="radial-left"></div>
+
+      <!-- Fondo Radial Derecho -->
+      <div class="radial-right"></div>
+
+      <!-- Contenido dinámico -->
+      <slot />
+    </div>
+  </body>
+  <style>
+    /* Configuración básica */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Fondo principal */
+    .container {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      background-color: #0f172a; /* Equivalente a bg-slate-950 */
+      overflow: hidden;
+    }
+
+    /* Fondo radial izquierdo */
+    .radial-left {
+      position: absolute;
+      top: -10%;
+      left: -20%;
+      height: 500px;
+      width: 500px;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle farthest-side,
+        rgba(255, 0, 182, 0.15),
+        rgba(255, 255, 255, 0)
+      );
+    }
+
+    /* Fondo radial derecho */
+    .radial-right {
+      position: absolute;
+      top: -10%;
+      right: -20%;
+      height: 500px;
+      width: 500px;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle farthest-side,
+        rgba(255, 0, 182, 0.15),
+        rgba(255, 255, 255, 0)
+      );
+    }
+
+    /* Contenido dinámico */
+    slot {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: #fff;
+      display: block;
+      margin-top: 20%;
+    }
+
+    slot::slotted(h1) {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    slot::slotted(p) {
+      font-size: 1.25rem;
+      color: #d1d5db; /* Equivalente a text-gray-300 */
+    }
+  </style>
+</html>

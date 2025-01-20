@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div id="cajas">
+    <div class="cabeza">
+      <h1>Te Amo</h1>
+      <p>Besitos besitos</p>
+    </div>
+    <div class="cen links">
+      <img src="/src/imag/images.jpg" alt="Imagen de amor" />
+      <img src="/src/imag/image1s.jpg" alt="Imagen de amor" />
+      <video id="video" controls>
+        <source
+          src="/src/imag/Mon Laferte - Amor Completo.webm"
+          type="video/webm"
+        />
+        <source
+          src="/src/imag/Mon Laferte - Amor Completo.mp4"
+          type="video/mp4"
+        />
+        Tu navegador no soporta el formato de video.
+      </video>
+    </div>
+  </div>
+  <style>
+    /* Estilos generales */
+    #cajas {
+      overflow: auto; /* Permite desplazamiento */
+      height: 100vh; /* Contenedor completo */
+    }
+
+    #video {
+      width: 80%; /* 80% del ancho del contenedor */
+      max-width: 600px; /* Ancho máximo de 600px */
+      height: auto; /* Mantener proporción */
+    }
+
+    .cen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%; /* Centrado vertical */
+    }
+
+    img {
+      max-width: 100%; /* Imágenes no exceden el ancho */
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    /* Estilos para el título */
+    h1,
+    p {
+      font-size: 2.5rem;
+      color: #eaeaea;
+      margin-bottom: 2rem;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</Layout>
